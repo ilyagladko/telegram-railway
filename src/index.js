@@ -1,4 +1,4 @@
-import bodyParser from "body-parser";
+// import bodyParser from "body-parser";
 import express from "express";
 import { Telegraf } from "telegraf";
 //const axios = require('axios').default;
@@ -55,9 +55,9 @@ bot.launch();
 const app = express();
 const port = process.env.PORT || 3333;
 
-app.use(bodyParser.json());
-app.use(bodyParser.raw({ type: "application/vnd.custom-type" }));
-app.use(bodyParser.text({ type: "text/html" }));
+//app.use(bodyParser.json());
+//app.use(bodyParser.raw({ type: "application/vnd.custom-type" }));
+//app.use(bodyParser.text({ type: "text/html" }));
 
 app.get("/", async (req, res) => {
   res.json({ Hello: "World" });
